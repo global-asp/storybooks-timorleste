@@ -12,13 +12,13 @@
 	<link rel="shortcut icon" href="/storybooks-timorleste/favicon.ico?v=4">
 	<meta name="msapplication-TileColor" content="#00aba9">
 	<meta name="theme-color" content="#ffffff">
-	<title>Khalai talks to plants - Storybooks Timor-Leste</title>
+	<title>Khalai koalia ho planta sira. - Storybooks Timor-Leste</title>
 	<meta name="description" content="Storybooks Timor-Leste is designed specifically for teachers, parents, and community members. It makes 40 stories from the African Storybook available with text and audio in Tetun and Portuguese as well as the most widely spoken languages of Timor-Leste.
 ">
 	<link rel="stylesheet" href="/storybooks-timorleste/css/spectre.min.css">
 	<link rel="stylesheet" href="/storybooks-timorleste/css/gsn.min.css">
 	<link rel="stylesheet" href="/storybooks-timorleste/css/fontello.min.css">
-	<link rel="canonical" href="https://global-asp.github.io//storybooks-timorleste/stories/en/0089/">
+	<link rel="canonical" href="https://global-asp.github.io//storybooks-timorleste/stories/tet/0089/">
 	<link rel="alternate" type="application/rss+xml" title="Storybooks Timor-Leste" href="/storybooks-timorleste">
 	<script src="/storybooks-timorleste/js/sbc.min.js"></script>
 </head>
@@ -58,30 +58,28 @@
 	</select>
 </div>
 
-        <a class="btn btn-lg" href="/storybooks-timorleste/stories/en">Back to stories list</a><br><br>
+        <a class="btn btn-lg" href="/storybooks-timorleste/stories/tet">Back to stories list</a><br><br>
 
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0089/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1><span class="def">Khalai talks to plants</span>
+		<h1><span class="def">Khalai koalia ho planta sira.</span>
 			<span class="l1">Khalai koalia ho planta sira.</span>
 			<span class="l2">Khalai fala com as plantas</span>
 		</h1>
 		<div class="btn-group cover-buttons">
 			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
-			<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/en/0089/mp3/01.mp3"></audio>
-			<button onclick="switchlang('en,tet','tet,pt,en')" class="btn btn-lg lang-primary" title="Switch between English and Tetun">tet</button>
-			<button onclick="switchlang('en,pt','tet,pt,en')" class="btn btn-lg lang-secondary" title="Switch between English and Portuguese">pt</button>
+			<button class="btn btn-lg disabled" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
+			<button onclick="switchlang('tet,pt','tet,pt,tet')" class="btn btn-lg lang-secondary" title="Switch between Tetum and Portuguese">pt</button>
 		</div>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/pencil.svg" alt="Written by"></span> Ursula Nafula</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustrated by"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/art.svg" alt="Illustrated by"></span> Jesse Pietersen</h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Read by"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/megaphone.svg" alt="Read by"></span> Darshan Soni</h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/language.svg" alt="Language"></span> <a href="/storybooks-timorleste/stories/en">English</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/level.svg" alt="Level"></span> <a href="/storybooks-timorleste/stories/en/level2">Level 2</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon cover-icon-audio" src="/storybooks-timorleste/css/speaker.svg" alt="Narrate full story"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/en/0089/en-0089_khalai.mp3" type="audio/mpeg"></audio></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Reading speed"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/speedometer.svg" alt="Reading speed" style="cursor:pointer" onclick="normalspeed()"></span> <span id="slider_tooltip" class="tooltip" data-tooltip="Reading speed: 1×"><input type="range" min="0.5" max="1.5" value="1" step="0.05" id="audio_slider" class="slider" oninput="adjustslider()"></span></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Translated by"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/global.svg" alt="Translated by"></span> Aurelio da Costa</h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/language.svg" alt="Language"></span> <a href="/storybooks-timorleste/stories/tet">Tetum</a></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/level.svg" alt="Level"></span> <a href="/storybooks-timorleste/stories/tet/level2">Level 2</a></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/speaker.svg" alt="Narrate full story"></span> <span class="cover_msg">The audio for this story is currently not available.</span></h3>
+
 	</div>
 </div>
 
@@ -90,11 +88,7 @@
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0089/02.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	This is Khalai.
-She is seven years old.
-Her name means ‘the
-good one’ in her
-language, Lubukusu.
+	Nee mak Khalai. Nia tinan hitu. Ninia naran signifika ‘buat diak ida’ iha ninia lian, Lubukusu.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -107,12 +101,11 @@ language, Lubukusu.
 	<div class="btn-group switcher-group">
 		<a href="#text01" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text03" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio02" src="https://globalstorybooks.net/media/audio/en/0089/mp3/02.mp3"></audio>
-		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<button class="btn btn-lg disabled" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,tet','tet,pt,en')" class="btn btn-lg lang-primary" title="Switch between English and Tetun">tet</button>
-		<button onclick="switchlang('en,pt','tet,pt,en')" class="btn btn-lg lang-secondary" title="Switch between English and Portuguese">pt</button>
+		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
+		<button onclick="switchlang('tet,pt','tet,pt,tet')" class="btn btn-lg lang-secondary" title="Switch between Tetum and Portuguese">pt</button>
 	</div>
 </div>
 
@@ -122,11 +115,7 @@ language, Lubukusu.
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0089/03.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	Khalai wakes up and
-talks to the orange tree.
-“Please orange tree,
-grow big and give us
-lots of ripe oranges.”
+	Khalai hadeer no koalia ho sabraka hun. “Favor sabraka hun, aas sa’e ba no fo mai ami sabraka fuan tasak barak.”
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -139,12 +128,11 @@ lots of ripe oranges.”
 	<div class="btn-group switcher-group">
 		<a href="#text02" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text04" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio03" src="https://globalstorybooks.net/media/audio/en/0089/mp3/03.mp3"></audio>
-		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<button class="btn btn-lg disabled" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,tet','tet,pt,en')" class="btn btn-lg lang-primary" title="Switch between English and Tetun">tet</button>
-		<button onclick="switchlang('en,pt','tet,pt,en')" class="btn btn-lg lang-secondary" title="Switch between English and Portuguese">pt</button>
+		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
+		<button onclick="switchlang('tet,pt','tet,pt,tet')" class="btn btn-lg lang-secondary" title="Switch between Tetum and Portuguese">pt</button>
 	</div>
 </div>
 
@@ -154,11 +142,7 @@ lots of ripe oranges.”
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0089/04.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	Khalai walks to school.
-On the way she talks to
-the grass. “Please
-grass, grow greener
-and don’t dry up.”
+	Khalai la’o ba eskola. Iha dalan nia koalia ho duut. “Duut favor, sai matak liu-tan no labele sai maran.”
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -171,12 +155,11 @@ and don’t dry up.”
 	<div class="btn-group switcher-group">
 		<a href="#text03" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text05" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio04" src="https://globalstorybooks.net/media/audio/en/0089/mp3/04.mp3"></audio>
-		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<button class="btn btn-lg disabled" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,tet','tet,pt,en')" class="btn btn-lg lang-primary" title="Switch between English and Tetun">tet</button>
-		<button onclick="switchlang('en,pt','tet,pt,en')" class="btn btn-lg lang-secondary" title="Switch between English and Portuguese">pt</button>
+		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
+		<button onclick="switchlang('tet,pt','tet,pt,tet')" class="btn btn-lg lang-secondary" title="Switch between Tetum and Portuguese">pt</button>
 	</div>
 </div>
 
@@ -186,11 +169,7 @@ and don’t dry up.”
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0089/05.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	Khalai passes wild
-flowers. “Please
-flowers, keep blooming
-so I can put you in my
-hair.”
+	Khalai lao liu ai-funan fui “Favor ai-funan, funan nafatin atu nunee hau bele tau o iha hau nia fuuk.”
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -203,12 +182,11 @@ hair.”
 	<div class="btn-group switcher-group">
 		<a href="#text04" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text06" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio05" src="https://globalstorybooks.net/media/audio/en/0089/mp3/05.mp3"></audio>
-		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<button class="btn btn-lg disabled" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,tet','tet,pt,en')" class="btn btn-lg lang-primary" title="Switch between English and Tetun">tet</button>
-		<button onclick="switchlang('en,pt','tet,pt,en')" class="btn btn-lg lang-secondary" title="Switch between English and Portuguese">pt</button>
+		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
+		<button onclick="switchlang('tet,pt','tet,pt,tet')" class="btn btn-lg lang-secondary" title="Switch between Tetum and Portuguese">pt</button>
 	</div>
 </div>
 
@@ -218,13 +196,7 @@ hair.”
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0089/06.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	At school, Khalai talks
-to the tree in the
-middle of the
-compound. “Please
-tree, put out big
-branches so we can
-read under your shade.”
+	Iha eskola, Khalai koalia ba ai-hun iha resintu nia klaran.”Favor ai-hun, fo sai sanak boot sira atu nunee ami bele lee iha o nia mahon.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -237,12 +209,11 @@ read under your shade.”
 	<div class="btn-group switcher-group">
 		<a href="#text05" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text07" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio06" src="https://globalstorybooks.net/media/audio/en/0089/mp3/06.mp3"></audio>
-		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<button class="btn btn-lg disabled" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,tet','tet,pt,en')" class="btn btn-lg lang-primary" title="Switch between English and Tetun">tet</button>
-		<button onclick="switchlang('en,pt','tet,pt,en')" class="btn btn-lg lang-secondary" title="Switch between English and Portuguese">pt</button>
+		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
+		<button onclick="switchlang('tet,pt','tet,pt,tet')" class="btn btn-lg lang-secondary" title="Switch between Tetum and Portuguese">pt</button>
 	</div>
 </div>
 
@@ -252,11 +223,7 @@ read under your shade.”
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0089/07.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	Khalai talks to the
-hedge around her school.
-“Please grow strong
-and stop bad people
-from coming in.”
+	Khalai koalia ba ai-badak sira haleu ninia eskola.”Favor sai forte no hapara ema aat sira tama mai.”
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -269,12 +236,11 @@ from coming in.”
 	<div class="btn-group switcher-group">
 		<a href="#text06" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text08" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio07" src="https://globalstorybooks.net/media/audio/en/0089/mp3/07.mp3"></audio>
-		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<button class="btn btn-lg disabled" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,tet','tet,pt,en')" class="btn btn-lg lang-primary" title="Switch between English and Tetun">tet</button>
-		<button onclick="switchlang('en,pt','tet,pt,en')" class="btn btn-lg lang-secondary" title="Switch between English and Portuguese">pt</button>
+		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
+		<button onclick="switchlang('tet,pt','tet,pt,tet')" class="btn btn-lg lang-secondary" title="Switch between Tetum and Portuguese">pt</button>
 	</div>
 </div>
 
@@ -284,11 +250,7 @@ from coming in.”
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0089/08.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	When Khalai returns
-home from school, she
-visits the orange tree.
-“Are your oranges ripe
-yet?” asks Khalai.
+	Bainhira Khalai fila ba uma husi eskola, nia vizita sabraka oan. “O nia sabraka fuan sira tasak ona?” Khalai husu.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -301,12 +263,11 @@ yet?” asks Khalai.
 	<div class="btn-group switcher-group">
 		<a href="#text07" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text09" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio08" src="https://globalstorybooks.net/media/audio/en/0089/mp3/08.mp3"></audio>
-		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<button class="btn btn-lg disabled" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,tet','tet,pt,en')" class="btn btn-lg lang-primary" title="Switch between English and Tetun">tet</button>
-		<button onclick="switchlang('en,pt','tet,pt,en')" class="btn btn-lg lang-secondary" title="Switch between English and Portuguese">pt</button>
+		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
+		<button onclick="switchlang('tet,pt','tet,pt,tet')" class="btn btn-lg lang-secondary" title="Switch between Tetum and Portuguese">pt</button>
 	</div>
 </div>
 
@@ -316,13 +277,7 @@ yet?” asks Khalai.
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0089/09.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
-	“The oranges are still
-green,” sighs Khalai.
-“I will see you tomorrow
-orange tree,” says
-Khalai. “Perhaps then
-you will have a ripe
-orange for me!”
+	“Sabraka sira nee sei verde nafatin,” Khalai suspira. “Hau sei hasoru o aban sabraka hun,” Khalai hateten.” Karik depois o sei iha sabraka tasak mai hau!”
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
@@ -335,12 +290,11 @@ orange for me!”
 	<div class="btn-group switcher-group">
 		<a href="#text08" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#colophon" class="btn btn-lg" title="Story credits"><i class="icon-arrow-down"></i></a>
-		<audio id="audio09" src="https://globalstorybooks.net/media/audio/en/0089/mp3/09.mp3"></audio>
-		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<button class="btn btn-lg disabled" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('en,tet','tet,pt,en')" class="btn btn-lg lang-primary" title="Switch between English and Tetun">tet</button>
-		<button onclick="switchlang('en,pt','tet,pt,en')" class="btn btn-lg lang-secondary" title="Switch between English and Portuguese">pt</button>
+		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
+		<button onclick="switchlang('tet,pt','tet,pt,tet')" class="btn btn-lg lang-secondary" title="Switch between Tetum and Portuguese">pt</button>
 	</div>
 </div>
 
@@ -352,31 +306,28 @@ orange for me!”
 	<div class="column col-7 col-lg-12 col-md-12 col-sm-12">
 		<h5><span class="colophon-heading">Written by:</span> Ursula Nafula</h5>
 		<h5><span class="colophon-heading">Illustrated by:</span> Jesse Pietersen</h5>
-		<h5><span class="colophon-heading">Read by:</span> Darshan Soni</h5>
-		<h5><span class="colophon-heading">Language:</span> <a href="/storybooks-timorleste/stories/en">English</a></h5>
-		<h5><span class="colophon-heading">Level:</span> <a href="/storybooks-timorleste/stories/en/level2">Level 2</a></h5>
+		<h5><span class="colophon-heading">Translated by:</span> Aurelio da Costa</h5>
+		<h5><span class="colophon-heading">Language:</span> <a href="/storybooks-timorleste/stories/tet">Tetum</a></h5>
+		<h5><span class="colophon-heading">Level:</span> <a href="/storybooks-timorleste/stories/tet/level2">Level 2</a></h5>
 		<h5><span class="colophon-heading">Source:</span> <a href="https://africanstorybook.org/reader.php?id=13545" target="_blank">Khalai talks to plants</a> from <a href="https://africanstorybook.org/">African Storybook</a></h5>
 
 		<div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</div>
 
 	</div>
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12">
-		<h5>Read more <a href="/storybooks-timorleste/stories/en/level2">level 2</a> stories:</h5>
-			<label class="chip"><a href="/storybooks-timorleste/stories/en/0337/">Children of wax</a></label>
-			<label class="chip"><a href="/storybooks-timorleste/stories/en/0111/">Why hippos have no hair</a></label>
-			<label class="chip"><a href="/storybooks-timorleste/stories/en/0095/">Zama is great!</a></label>
-			<label class="chip"><a href="/storybooks-timorleste/stories/en/0027/">Decision</a></label>
-			<label class="chip"><a href="/storybooks-timorleste/stories/en/0296/">Tom the banana seller</a></label>
-			<label class="chip"><a href="/storybooks-timorleste/stories/en/0210/">Tingi and the Cows</a></label>
-			<label class="chip"><a href="/storybooks-timorleste/stories/en/0342/">Punishment</a></label>
-			<label class="chip"><a href="/storybooks-timorleste/stories/en/0004/">Goat, Dog, and Cow</a></label>
-			<label class="chip"><a href="/storybooks-timorleste/stories/en/0234/">Andiswa Soccer Star</a></label>
-			<label class="chip"><a href="/storybooks-timorleste/stories/en/0001/">A very tall man</a></label>
+		<h5>Read more <a href="/storybooks-timorleste/stories/tet/level2">level 2</a> stories:</h5>
+			<label class="chip"><a href="/storybooks-timorleste/stories/tet/0337/">Lilin nia oan sira</a></label>
+			<label class="chip"><a href="/storybooks-timorleste/stories/tet/0111/">Tanba sá Hipopótamo sira la iha fulun</a></label>
+			<label class="chip"><a href="/storybooks-timorleste/stories/tet/0027/">Desizaun</a></label>
+			<label class="chip"><a href="/storybooks-timorleste/stories/tet/0296/">Tom vendedor hudi.</a></label>
+			<label class="chip"><a href="/storybooks-timorleste/stories/tet/0210/">Tingi no Karau Vaka</a></label>
+			<label class="chip"><a href="/storybooks-timorleste/stories/tet/0004/">Bibi, Asu, no Karau</a></label>
+			<label class="chip"><a href="/storybooks-timorleste/stories/tet/0001/">Ema ain ás liu ida</a></label>
 	</div>
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/storybooks-timorleste/stories/en" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
+	<a class="btn btn-lg" href="/storybooks-timorleste/stories/tet" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
 <br><br>
 </div>
 
