@@ -69,17 +69,20 @@
 		</h1>
 		<div class="btn-group cover-buttons">
 			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-			<button class="btn btn-lg disabled" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/tet/0066/mp3/01.mp3"></audio>
 			<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
 			<button onclick="switchlang('tet,pt','tet,pt,tet')" class="btn btn-lg lang-secondary" title="Switch between Tetum and Portuguese">pt</button>
 		</div>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/pencil.svg" alt="Written by"></span> Tessa Welch</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustrated by"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/art.svg" alt="Illustrated by"></span> Wiehan de Jager</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Translated by"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/global.svg" alt="Translated by"></span> Aurelio da Costa</h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Read by"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/megaphone.svg" alt="Read by"></span> Aurelio Costa, Vitalina Costa, Criscencia Costa</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/language.svg" alt="Language"></span> <a href="/storybooks-timorleste/stories/tet">Tetum</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/level.svg" alt="Level"></span> <a href="/storybooks-timorleste/stories/tet/level3">Level 3</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/speaker.svg" alt="Narrate full story"></span> <span class="cover_msg">The audio for this story is currently not available.</span></h3>
-
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon cover-icon-audio" src="/storybooks-timorleste/css/speaker.svg" alt="Narrate full story"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/tet/0066/tet-0066_nozibele.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Reading speed"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/speedometer.svg" alt="Reading speed" style="cursor:pointer" onclick="normalspeed()"></span> <span id="slider_tooltip" class="tooltip" data-tooltip="Reading speed: 1×"><input type="range" min="0.5" max="1.5" value="1" step="0.05" id="audio_slider" class="slider" oninput="adjustslider()"></span></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 
@@ -101,7 +104,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text01" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text03" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio02" onended="resetbutton('02')" src="https://globalstorybooks.net/media/audio/tet/0066/mp3/02.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -128,7 +132,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text02" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text04" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio03" onended="resetbutton('03')" src="https://globalstorybooks.net/media/audio/tet/0066/mp3/03.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -155,7 +160,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text03" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text05" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio04" onended="resetbutton('04')" src="https://globalstorybooks.net/media/audio/tet/0066/mp3/04.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -169,11 +175,11 @@
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/05.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-	bainhira sira besik uma, Nozibele hasa’e ninia liman ba ninia kakorok. Nia haluha tiha ona ninia korrente! “Favor mai fali ho ha’u!” Nia husu ba ninia belun. maibé ninia belun sira dehan ne’e tarde loos ona.
+	Bainhira sira besik uma, Nozibele hasa’e ninia liman ba ninia kakorok. Nia haluha tiha ona ninia korrente! “Favor mai fali ho ha’u!” Nia husu ba ninia belun. Maibé ninia belun sira dehan ne’e tarde loos ona.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
-	bainhira sira besik uma, Nozibele hasa’e ninia liman ba ninia kakorok. Nia haluha tiha ona ninia korrente! “Favor mai fali ho ha’u!” Nia husu ba ninia belun. maibé ninia belun sira dehan ne’e tarde loos ona.
+	Bainhira sira besik uma, Nozibele hasa’e ninia liman ba ninia kakorok. Nia haluha tiha ona ninia korrente! “Favor mai fali ho ha’u!” Nia husu ba ninia belun. Maibé ninia belun sira dehan ne’e tarde loos ona.
 	</h3></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
 	Quando estavam chegando perto de casa, Nozibele colocou sua mão em volta do pescoço. Ela tinha esquecido seu colar! “Por favor, voltem até lá comigo!”, implorou a suas amigas. Mas elas disseram que estava muito tarde.
@@ -182,7 +188,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text04" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text06" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio05" onended="resetbutton('05')" src="https://globalstorybooks.net/media/audio/tet/0066/mp3/05.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -196,11 +203,11 @@
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/06.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-	Ho nune’e Nozibele mesak mak ba fali mota mesak. Nia hetan ninia korrente no halai fila ba uma. maibé nia lakon iha nakukun laran.
+	Ho nune’e Nozibele mesak mak ba fali mota mesak. Nia hetan ninia korrente no halai fila ba uma. Maibé nia lakon iha nakukun laran.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
-	Ho nune’e Nozibele mesak mak ba fali mota mesak. Nia hetan ninia korrente no halai fila ba uma. maibé nia lakon iha nakukun laran.
+	Ho nune’e Nozibele mesak mak ba fali mota mesak. Nia hetan ninia korrente no halai fila ba uma. Maibé nia lakon iha nakukun laran.
 	</h3></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
 	Então, Nozibele voltou até o rio sozinha. Encontrou seu colar e correu em direção a sua casa. Mas perdeu-se no escuro.
@@ -209,7 +216,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text05" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text07" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio06" onended="resetbutton('06')" src="https://globalstorybooks.net/media/audio/tet/0066/mp3/06.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -223,11 +231,11 @@
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/07.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-	husi dook nia haree naroman mai husi uma du’ut ida. Nia halai ba ne’eba no dere odamatan.
+	Husi dook nia haree naroman mai husi uma du’ut ida. Nia halai ba ne’eba no dere odamatan.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
-	husi dook nia haree naroman mai husi uma du’ut ida. Nia halai ba ne’eba no dere odamatan.
+	Husi dook nia haree naroman mai husi uma du’ut ida. Nia halai ba ne’eba no dere odamatan.
 	</h3></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
 	A distância, ela viu uma luz vindo de uma cabana. Correu em direção a ela e bateu na porta.
@@ -236,7 +244,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text06" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text08" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio07" onended="resetbutton('07')" src="https://globalstorybooks.net/media/audio/tet/0066/mp3/07.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -263,7 +272,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text07" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text09" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio08" onended="resetbutton('08')" src="https://globalstorybooks.net/media/audio/tet/0066/mp3/08.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -290,7 +300,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text08" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text10" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio09" onended="resetbutton('09')" src="https://globalstorybooks.net/media/audio/tet/0066/mp3/09.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -317,7 +328,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text09" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text11" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton10" onclick="playpause('10')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio10" onended="resetbutton('10')" src="https://globalstorybooks.net/media/audio/tet/0066/mp3/10.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton10" onclick="playpause('10')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -344,7 +356,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text10" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text12" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton11" onclick="playpause('11')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio11" onended="resetbutton('11')" src="https://globalstorybooks.net/media/audio/tet/0066/mp3/11.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton11" onclick="playpause('11')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -371,7 +384,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text11" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text13" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton12" onclick="playpause('12')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio12" onended="resetbutton('12')" src="https://globalstorybooks.net/media/audio/tet/0066/mp3/12.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton12" onclick="playpause('12')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -385,11 +399,11 @@
 <div id="text13" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/13.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-	bainhira asu ne’e fila mai, nia buka Nozibele. “Nozibele, o iha ne’ebé?” Nia hakilar. “Ha’u iha ne’e, iha kama okos,” fuuk primeiru hatan. “Ha’u iha ne’e, iha odamatan kotuk,” fuuk segundu hatan. “Ha’u iha ne’e, iha kraal,” fuuk terseiru hatan.
+	Bainhira asu ne’e fila mai, nia buka Nozibele. “Nozibele, o iha ne’ebé?” Nia hakilar. “Ha’u iha ne’e, iha kama okos,” fuuk primeiru hatan. “Ha’u iha ne’e, iha odamatan kotuk,” fuuk segundu hatan. “Ha’u iha ne’e, iha kraal,” fuuk terseiru hatan.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
-	bainhira asu ne’e fila mai, nia buka Nozibele. “Nozibele, o iha ne’ebé?” Nia hakilar. “Ha’u iha ne’e, iha kama okos,” fuuk primeiru hatan. “Ha’u iha ne’e, iha odamatan kotuk,” fuuk segundu hatan. “Ha’u iha ne’e, iha kraal,” fuuk terseiru hatan.
+	Bainhira asu ne’e fila mai, nia buka Nozibele. “Nozibele, o iha ne’ebé?” Nia hakilar. “Ha’u iha ne’e, iha kama okos,” fuuk primeiru hatan. “Ha’u iha ne’e, iha odamatan kotuk,” fuuk segundu hatan. “Ha’u iha ne’e, iha kraal,” fuuk terseiru hatan.
 	</h3></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
 	Quando o cachorro retornou, procurou Nozibele. “Nozibele, onde você está?” disse zangado. “Estou aqui embaixo da cama,” gritou o primeiro fio de cabelo. “Estou aqui atrás da porta,” disse o segundo fio. “Estou aqui, no curral,” disse o terceiro fio de cabelo.
@@ -398,7 +412,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text12" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text14" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton13" onclick="playpause('13')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio13" onended="resetbutton('13')" src="https://globalstorybooks.net/media/audio/tet/0066/mp3/13.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton13" onclick="playpause('13')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -412,11 +427,11 @@
 <div id="text14" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/14.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-	Depois asu ne’e hatene katak Nozibele lohi tiha ona nia. Entaun nia halai no halai ba iha suku. maibé Nozibele ninia maun sira hein nia ho ai-sanak tolu. Asu ne’e fila no halai no nunka haree hetan dezde momentu ne’e.
+	Depois asu ne’e hatene katak Nozibele lohi tiha ona nia. Entaun nia halai no halai ba iha suku. Maibé Nozibele ninia maun sira hein nia ho ai-sanak tolu. Asu ne’e fila no halai no nunka haree hetan dezde momentu ne’e.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
-	Depois asu ne’e hatene katak Nozibele lohi tiha ona nia. Entaun nia halai no halai ba iha suku. maibé Nozibele ninia maun sira hein nia ho ai-sanak tolu. Asu ne’e fila no halai no nunka haree hetan dezde momentu ne’e.
+	Depois asu ne’e hatene katak Nozibele lohi tiha ona nia. Entaun nia halai no halai ba iha suku. Maibé Nozibele ninia maun sira hein nia ho ai-sanak tolu. Asu ne’e fila no halai no nunka haree hetan dezde momentu ne’e.
 	</h3></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
 	Logo o cachorro notou que Nozibele tinha lhe enganado. Portanto, ele correu e correu todo o caminho até chegar à aldeia. Mas os irmãos de Nozibele estavam o esperando com três grandes pedaços de pau. O cachorro voltou correndo e nunca mais foi visto desde então.
@@ -425,7 +440,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text13" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#colophon" class="btn btn-lg" title="Story credits"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton14" onclick="playpause('14')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio14" onended="resetbutton('14')" src="https://globalstorybooks.net/media/audio/tet/0066/mp3/14.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton14" onclick="playpause('14')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -442,6 +458,7 @@
 		<h5><span class="colophon-heading">Written by:</span> Tessa Welch</h5>
 		<h5><span class="colophon-heading">Illustrated by:</span> Wiehan de Jager</h5>
 		<h5><span class="colophon-heading">Translated by:</span> Aurelio da Costa</h5>
+		<h5><span class="colophon-heading">Read by:</span> Aurelio Costa, Vitalina Costa, Criscencia Costa</h5>
 		<h5><span class="colophon-heading">Language:</span> <a href="/storybooks-timorleste/stories/tet">Tetum</a></h5>
 		<h5><span class="colophon-heading">Level:</span> <a href="/storybooks-timorleste/stories/tet/level3">Level 3</a></h5>
 		<h5><span class="colophon-heading">Source:</span> <a href="https://africanstorybook.org/reader.php?id=1880" target="_blank">Nozibele and the three hairs</a> from <a href="https://africanstorybook.org/">African Storybook</a></h5>

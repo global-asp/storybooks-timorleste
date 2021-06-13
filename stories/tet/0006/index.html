@@ -69,17 +69,20 @@
 		</h1>
 		<div class="btn-group cover-buttons">
 			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-			<button class="btn btn-lg disabled" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/tet/0006/mp3/01.mp3"></audio>
 			<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
 			<button onclick="switchlang('tet,pt','tet,pt,tet')" class="btn btn-lg lang-secondary" title="Switch between Tetum and Portuguese">pt</button>
 		</div>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/pencil.svg" alt="Written by"></span> Ghanaian folktale</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustrated by"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/art.svg" alt="Illustrated by"></span> Wiehan de Jager</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Translated by"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/global.svg" alt="Translated by"></span> Aurelio da Costa</h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Read by"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/megaphone.svg" alt="Read by"></span> Aurelio Costa, Vitalina Costa, Criscencia Costa</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/language.svg" alt="Language"></span> <a href="/storybooks-timorleste/stories/tet">Tetum</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/level.svg" alt="Level"></span> <a href="/storybooks-timorleste/stories/tet/level3">Level 3</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/speaker.svg" alt="Narrate full story"></span> <span class="cover_msg">The audio for this story is currently not available.</span></h3>
-
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon cover-icon-audio" src="/storybooks-timorleste/css/speaker.svg" alt="Narrate full story"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/tet/0006/tet-0006_anansi.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Reading speed"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/speedometer.svg" alt="Reading speed" style="cursor:pointer" onclick="normalspeed()"></span> <span id="slider_tooltip" class="tooltip" data-tooltip="Reading speed: 1×"><input type="range" min="0.5" max="1.5" value="1" step="0.05" id="audio_slider" class="slider" oninput="adjustslider()"></span></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 
@@ -101,7 +104,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text01" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text03" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio02" onended="resetbutton('02')" src="https://globalstorybooks.net/media/audio/tet/0006/mp3/02.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -115,11 +119,11 @@
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/03.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-	Loron ida, Nyame deside katak atu fó sanan-rai matenek ne’e ba Anansi. bainhira Anansi hateke tama ba sanan-rai ida ne’e nia laran, nia aprende buat fóun ida. Furak tebes!
+	Loron ida, Nyame deside katak atu fó sanan-rai matenek ne’e ba Anansi. Bainhira Anansi hateke tama ba sanan-rai ida ne’e nia laran, nia aprende buat fóun ida. Furak tebes!
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
-	Loron ida, Nyame deside katak atu fó sanan-rai matenek ne’e ba Anansi. bainhira Anansi hateke tama ba sanan-rai ida ne’e nia laran, nia aprende buat fóun ida. Furak tebes!
+	Loron ida, Nyame deside katak atu fó sanan-rai matenek ne’e ba Anansi. Bainhira Anansi hateke tama ba sanan-rai ida ne’e nia laran, nia aprende buat fóun ida. Furak tebes!
 	</h3></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
 	Um dia, Nyame decidiu que ele daria o vaso da sabedoria para Anansi. Toda vez que Anansi olhava para dentro do vaso de barro, ele aprendia alguma coisa nova. Isso era muito legal!
@@ -128,7 +132,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text02" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text04" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio03" onended="resetbutton('03')" src="https://globalstorybooks.net/media/audio/tet/0006/mp3/03.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -142,11 +147,11 @@
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/04.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-	Anansi ne’ebé kaan-teen hanoin ona, “Hau sei rai sanan-rai ne’e ho seguru iha ai-hun ás ida nia leten. Atu nune’e nia sai ha’u mesak nian!” Nia nakdulas ho kabas lahan naruk ida, dada haleu sanan-rai ne’e, no nia kesi ba ninia kanotak. Nia komesa atu sa’e ai-hun ne’e. maibé difisil atu sa’e ai-hun ne’e tanba sanan-rai ne’e soke bebeik nia ain-tuur.
+	Anansi ne’ebé kaan-teen hanoin ona, “Hau sei rai sanan-rai ne’e ho seguru iha ai-hun ás ida nia leten. Atu nune’e nia sai ha’u mesak nian!” Nia nakdulas ho kabas lahan naruk ida, dada haleu sanan-rai ne’e, no nia kesi ba ninia kanotak. Nia komesa atu sa’e ai-hun ne’e. Maibé difisil atu sa’e ai-hun ne’e tanba sanan-rai ne’e soke bebeik nia ain-tuur.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
-	Anansi ne’ebé kaan-teen hanoin ona, “Hau sei rai sanan-rai ne’e ho seguru iha ai-hun ás ida nia leten. Atu nune’e nia sai ha’u mesak nian!” Nia nakdulas ho kabas lahan naruk ida, dada haleu sanan-rai ne’e, no nia kesi ba ninia kanotak. Nia komesa atu sa’e ai-hun ne’e. maibé difisil atu sa’e ai-hun ne’e tanba sanan-rai ne’e soke bebeik nia ain-tuur.
+	Anansi ne’ebé kaan-teen hanoin ona, “Hau sei rai sanan-rai ne’e ho seguru iha ai-hun ás ida nia leten. Atu nune’e nia sai ha’u mesak nian!” Nia nakdulas ho kabas lahan naruk ida, dada haleu sanan-rai ne’e, no nia kesi ba ninia kanotak. Nia komesa atu sa’e ai-hun ne’e. Maibé difisil atu sa’e ai-hun ne’e tanba sanan-rai ne’e soke bebeik nia ain-tuur.
 	</h3></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
 	O ganancioso Anansi pensou, “Vou guardar o vaso com segurança no topo de uma árvore bem alta. Assim posso ficar com tudo só para mim!” Ele enrolou um fio longo em volta do vaso e amarrou-o a sua barriga. Então, começou a escalar a árvore, mas foi difícil subir com o vaso batendo o tempo todo em seus joelhos.
@@ -155,7 +160,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text03" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text05" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio04" onended="resetbutton('04')" src="https://globalstorybooks.net/media/audio/tet/0006/mp3/04.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -182,7 +188,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text04" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text06" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio05" onended="resetbutton('05')" src="https://globalstorybooks.net/media/audio/tet/0006/mp3/05.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -209,7 +216,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text05" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text07" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio06" onended="resetbutton('06')" src="https://globalstorybooks.net/media/audio/tet/0006/mp3/06.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -236,7 +244,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text06" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#colophon" class="btn btn-lg" title="Story credits"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio07" onended="resetbutton('07')" src="https://globalstorybooks.net/media/audio/tet/0006/mp3/07.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -253,6 +262,7 @@
 		<h5><span class="colophon-heading">Written by:</span> Ghanaian folktale</h5>
 		<h5><span class="colophon-heading">Illustrated by:</span> Wiehan de Jager</h5>
 		<h5><span class="colophon-heading">Translated by:</span> Aurelio da Costa</h5>
+		<h5><span class="colophon-heading">Read by:</span> Aurelio Costa, Vitalina Costa, Criscencia Costa</h5>
 		<h5><span class="colophon-heading">Language:</span> <a href="/storybooks-timorleste/stories/tet">Tetum</a></h5>
 		<h5><span class="colophon-heading">Level:</span> <a href="/storybooks-timorleste/stories/tet/level3">Level 3</a></h5>
 		<h5><span class="colophon-heading">Source:</span> <a href="https://africanstorybook.org/reader.php?id=1938" target="_blank">Anansi and Wisdom</a> from <a href="https://africanstorybook.org/">African Storybook</a></h5>

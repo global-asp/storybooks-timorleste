@@ -69,17 +69,20 @@
 		</h1>
 		<div class="btn-group cover-buttons">
 			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-			<button class="btn btn-lg disabled" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/tet/0052/mp3/01.mp3"></audio>
 			<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
 			<button onclick="switchlang('tet,pt','tet,pt,tet')" class="btn btn-lg lang-secondary" title="Switch between Tetum and Portuguese">pt</button>
 		</div>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/pencil.svg" alt="Written by"></span> Rukia Nantale</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustrated by"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/art.svg" alt="Illustrated by"></span> Benjamin Mitchley</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Translated by"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/global.svg" alt="Translated by"></span> Aurelio da Costa</h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Read by"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/megaphone.svg" alt="Read by"></span> Aurelio Costa, Vitalina Costa, Criscencia Costa</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/language.svg" alt="Language"></span> <a href="/storybooks-timorleste/stories/tet">Tetum</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/level.svg" alt="Level"></span> <a href="/storybooks-timorleste/stories/tet/level5">Level 5</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/speaker.svg" alt="Narrate full story"></span> <span class="cover_msg">The audio for this story is currently not available.</span></h3>
-
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon cover-icon-audio" src="/storybooks-timorleste/css/speaker.svg" alt="Narrate full story"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/tet/0052/tet-0052_simbegwire.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Reading speed"><img class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/speedometer.svg" alt="Reading speed" style="cursor:pointer" onclick="normalspeed()"></span> <span id="slider_tooltip" class="tooltip" data-tooltip="Reading speed: 1×"><input type="range" min="0.5" max="1.5" value="1" step="0.05" id="audio_slider" class="slider" oninput="adjustslider()"></span></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="/storybooks-timorleste/css/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 
@@ -88,11 +91,11 @@
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/02.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3>
-	bainhira Simbegwire nia mama mate, nia triste loos. Simbegwire nia papa halo di’ak buat hotu ne’ebé nia bele hodi tau-matan ba nia oan-feto. Neneik, sira aprende atu sente kontente fila-fali la hó Simbegwire nia mama. Dadeer-dadeer sira tuur no ko’alia kona-ba loron tuir mai. Kalan kalan sira prepara han kalan hamutuk. Hafóin sira fase bikan fó’er sira, Simbegwire nia papa ajuda nia ho nia TPC.
+	Bainhira Simbegwire nia mama mate, nia triste loos. Simbegwire nia papa halo di’ak buat hotu ne’ebé nia bele hodi tau-matan ba nia oan-feto. Neneik, sira aprende atu sente kontente fila-fali la hó Simbegwire nia mama. Dadeer-dadeer sira tuur no ko’alia kona-ba loron tuir mai. Kalan kalan sira prepara han kalan hamutuk. Hafóin sira fase bikan fó’er sira, Simbegwire nia papa ajuda nia ho nia TPC.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l1"><h3>
-	bainhira Simbegwire nia mama mate, nia triste loos. Simbegwire nia papa halo di’ak buat hotu ne’ebé nia bele hodi tau-matan ba nia oan-feto. Neneik, sira aprende atu sente kontente fila-fali la hó Simbegwire nia mama. Dadeer-dadeer sira tuur no ko’alia kona-ba loron tuir mai. Kalan kalan sira prepara han kalan hamutuk. Hafóin sira fase bikan fó’er sira, Simbegwire nia papa ajuda nia ho nia TPC.
+	Bainhira Simbegwire nia mama mate, nia triste loos. Simbegwire nia papa halo di’ak buat hotu ne’ebé nia bele hodi tau-matan ba nia oan-feto. Neneik, sira aprende atu sente kontente fila-fali la hó Simbegwire nia mama. Dadeer-dadeer sira tuur no ko’alia kona-ba loron tuir mai. Kalan kalan sira prepara han kalan hamutuk. Hafóin sira fase bikan fó’er sira, Simbegwire nia papa ajuda nia ho nia TPC.
 	</h3></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l2"><h3>
 	Quando a mãe de Simbegwire morreu, ela ficou muito triste. O pai de Simbegwire fez o melhor que pode para cuidar de sua filha. Lentamente, eles aprenderam a sentirem-se felizes de novo, sem a mãe de Simbegwire. Cada manhã eles sentavam e conversavam sobre o dia que estava começando. Todas as noites eles faziam a janta juntos. Depois que eles lavavam a louça, o pai de Simbegwire a ajudava com a lição de casa.
@@ -101,7 +104,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text01" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text03" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio02" onended="resetbutton('02')" src="https://globalstorybooks.net/media/audio/tet/0052/mp3/02.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -128,7 +132,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text02" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text04" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio03" onended="resetbutton('03')" src="https://globalstorybooks.net/media/audio/tet/0052/mp3/03.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -142,11 +147,11 @@
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/04.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3>
-	“Ola Simbegwire, o nia papa konta buat barak ba ha’u kona-ba Ó,” Anita dehan. maibé nia la hamnasa ka ka’er Simbegwire nia liman. Simbegwire nia papa kontente no sente animadu. Nia ko’alia kona-ba sira nain tolu atu hela hamutuk, no oinsá sira nia moris sei sai di’ak. “Ha’u nia oan, ha’u espera o sei aseita Anita nu’udar o nia inan” nia dehan.
+	“Ola Simbegwire, o nia papa konta buat barak ba ha’u kona-ba Ó,” Anita dehan. Maibé nia la hamnasa ka ka’er Simbegwire nia liman. Simbegwire nia papa kontente no sente animadu. Nia ko’alia kona-ba sira nain tolu atu hela hamutuk, no oinsá sira nia moris sei sai di’ak. “Ha’u nia oan, ha’u espera o sei aseita Anita nu’udar o nia inan” nia dehan.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l1"><h3>
-	“Ola Simbegwire, o nia papa konta buat barak ba ha’u kona-ba Ó,” Anita dehan. maibé nia la hamnasa ka ka’er Simbegwire nia liman. Simbegwire nia papa kontente no sente animadu. Nia ko’alia kona-ba sira nain tolu atu hela hamutuk, no oinsá sira nia moris sei sai di’ak. “Ha’u nia oan, ha’u espera o sei aseita Anita nu’udar o nia inan” nia dehan.
+	“Ola Simbegwire, o nia papa konta buat barak ba ha’u kona-ba Ó,” Anita dehan. Maibé nia la hamnasa ka ka’er Simbegwire nia liman. Simbegwire nia papa kontente no sente animadu. Nia ko’alia kona-ba sira nain tolu atu hela hamutuk, no oinsá sira nia moris sei sai di’ak. “Ha’u nia oan, ha’u espera o sei aseita Anita nu’udar o nia inan” nia dehan.
 	</h3></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l2"><h3>
 	“Oi, Simbegwire, seu pai me falou muito sobre você,” disse Anita. Mas ela não sorriu ou segurou a mão da menina. O pai de Simbegwire estava feliz e empolgado. Ele falou sobre os três morarem juntos e o quão feliz a vida deles poderia ser. “Minha criança, espero que você aceite Anita como sua mãe,” ele disse.
@@ -155,7 +160,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text03" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text05" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio04" onended="resetbutton('04')" src="https://globalstorybooks.net/media/audio/tet/0052/mp3/04.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -182,7 +188,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text04" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text06" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio05" onended="resetbutton('05')" src="https://globalstorybooks.net/media/audio/tet/0052/mp3/05.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -209,7 +216,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text05" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text07" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio06" onended="resetbutton('06')" src="https://globalstorybooks.net/media/audio/tet/0052/mp3/06.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -236,7 +244,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text06" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text08" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio07" onended="resetbutton('07')" src="https://globalstorybooks.net/media/audio/tet/0052/mp3/07.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -263,7 +272,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text07" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text09" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio08" onended="resetbutton('08')" src="https://globalstorybooks.net/media/audio/tet/0052/mp3/08.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -290,7 +300,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text08" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text10" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio09" onended="resetbutton('09')" src="https://globalstorybooks.net/media/audio/tet/0052/mp3/09.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -304,11 +315,11 @@
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/10.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3>
-	bainhira kalan to’o, nia sa’e ba ai-hun aas ida besik mota ki’ik-oan ida no halo kama ida ba nia aan iha ai-sanak sira leet. bainhira nia ba toba, nia kanta: “Maama, maama, maama, o husik hela ha’u. O husik hela ha’u no la fila mai. Apa la hadomi ha’u ona. Ama, bainhira mak o fila mai? O husik hela ha’u.”
+	Bainhira kalan to’o, nia sa’e ba ai-hun aas ida besik mota ki’ik-oan ida no halo kama ida ba nia aan iha ai-sanak sira leet. Bainhira nia ba toba, nia kanta: “Maama, maama, maama, o husik hela ha’u. O husik hela ha’u no la fila mai. Apa la hadomi ha’u ona. Ama, bainhira mak o fila mai? O husik hela ha’u.”
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l1"><h3>
-	bainhira kalan to’o, nia sa’e ba ai-hun aas ida besik mota ki’ik-oan ida no halo kama ida ba nia aan iha ai-sanak sira leet. bainhira nia ba toba, nia kanta: “Maama, maama, maama, o husik hela ha’u. O husik hela ha’u no la fila mai. Apa la hadomi ha’u ona. Ama, bainhira mak o fila mai? O husik hela ha’u.”
+	Bainhira kalan to’o, nia sa’e ba ai-hun aas ida besik mota ki’ik-oan ida no halo kama ida ba nia aan iha ai-sanak sira leet. Bainhira nia ba toba, nia kanta: “Maama, maama, maama, o husik hela ha’u. O husik hela ha’u no la fila mai. Apa la hadomi ha’u ona. Ama, bainhira mak o fila mai? O husik hela ha’u.”
 	</h3></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l2"><h3>
 	Quando entardeceu, ela subiu numa árvore bem alta perto de um riacho e fez uma cama para ela nos galhos. Quando ela foi dormir, cantou: “Maama, maama, você me deixou. Você foi embora e nunca voltou. Papai não me ama mais. Mãe, quando você volta? Você me deixou.”
@@ -317,7 +328,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text09" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text11" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton10" onclick="playpause('10')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio10" onended="resetbutton('10')" src="https://globalstorybooks.net/media/audio/tet/0052/mp3/10.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton10" onclick="playpause('10')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -331,11 +343,11 @@
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/11.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3>
-	Dadeersaan tuir mai, Simbegwire kanta kansaun ne’e dala ida tan. bainhira feto sira mai fase sira nia ropa iha mota ki’ik ne’e, sira rona kansaun triste ida mai husi ai-hun aas ne’e. Sira hanoin se karik ne’e anin huu kona ai-tahan sira, no sira kontinua ho sira nia servisu. maibé feto ida husi sira rona ho atensaun ba kansaun ne’e.
+	Dadeersaan tuir mai, Simbegwire kanta kansaun ne’e dala ida tan. Bainhira feto sira mai fase sira nia ropa iha mota ki’ik ne’e, sira rona kansaun triste ida mai husi ai-hun aas ne’e. Sira hanoin se karik ne’e anin huu kona ai-tahan sira, no sira kontinua ho sira nia servisu. Maibé feto ida husi sira rona ho atensaun ba kansaun ne’e.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l1"><h3>
-	Dadeersaan tuir mai, Simbegwire kanta kansaun ne’e dala ida tan. bainhira feto sira mai fase sira nia ropa iha mota ki’ik ne’e, sira rona kansaun triste ida mai husi ai-hun aas ne’e. Sira hanoin se karik ne’e anin huu kona ai-tahan sira, no sira kontinua ho sira nia servisu. maibé feto ida husi sira rona ho atensaun ba kansaun ne’e.
+	Dadeersaan tuir mai, Simbegwire kanta kansaun ne’e dala ida tan. Bainhira feto sira mai fase sira nia ropa iha mota ki’ik ne’e, sira rona kansaun triste ida mai husi ai-hun aas ne’e. Sira hanoin se karik ne’e anin huu kona ai-tahan sira, no sira kontinua ho sira nia servisu. Maibé feto ida husi sira rona ho atensaun ba kansaun ne’e.
 	</h3></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l2"><h3>
 	Na manhã seguinte, Simbegwire cantou a mesma canção novamente. Quando as mulheres vieram lavar suas roupas no riacho, escutaram a triste canção, vindo da árvore alta. Elas pensaram que era só o vento e as folhas sussurrando, e continuaram seu trabalho. Mas uma mulher escutou cuidadosamente a canção.
@@ -344,7 +356,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text10" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text12" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton11" onclick="playpause('11')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio11" onended="resetbutton('11')" src="https://globalstorybooks.net/media/audio/tet/0052/mp3/11.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton11" onclick="playpause('11')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -358,11 +371,11 @@
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/12.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3>
-	Feto ne’e hateke sa’e ba ai leten. bainhira nia haree labarik feto ne’e no lensol koloridu nia rohan, nia tanis “Simbegwire, ha’u nia maun nia oan-feto!” Feto sira seluk para fase ropa no ajuda Simbegwire atu tuun husi ai-hun ne’e. Ninia tia hakohak labarik feto ki’ik ne’e no koko atu fó konfórtu ba nia.
+	Feto ne’e hateke sa’e ba ai leten. Bainhira nia haree labarik feto ne’e no lensol koloridu nia rohan, nia tanis “Simbegwire, ha’u nia maun nia oan-feto!” Feto sira seluk para fase ropa no ajuda Simbegwire atu tuun husi ai-hun ne’e. Ninia tia hakohak labarik feto ki’ik ne’e no koko atu fó konfórtu ba nia.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l1"><h3>
-	Feto ne’e hateke sa’e ba ai leten. bainhira nia haree labarik feto ne’e no lensol koloridu nia rohan, nia tanis “Simbegwire, ha’u nia maun nia oan-feto!” Feto sira seluk para fase ropa no ajuda Simbegwire atu tuun husi ai-hun ne’e. Ninia tia hakohak labarik feto ki’ik ne’e no koko atu fó konfórtu ba nia.
+	Feto ne’e hateke sa’e ba ai leten. Bainhira nia haree labarik feto ne’e no lensol koloridu nia rohan, nia tanis “Simbegwire, ha’u nia maun nia oan-feto!” Feto sira seluk para fase ropa no ajuda Simbegwire atu tuun husi ai-hun ne’e. Ninia tia hakohak labarik feto ki’ik ne’e no koko atu fó konfórtu ba nia.
 	</h3></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l2"><h3>
 	Esta mulher olhou para o alto da árvore. Quando ela avistou a menina e os pedaços do cobertor colorido, exclamou, “Simbegwire, criança de meu irmão!” As outras mulheres pararam de lavar e ajudaram Simbegwire a descer a árvore. Sua tia abraçou a pequena menina e tentou confortá-la.
@@ -371,7 +384,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text11" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text13" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton12" onclick="playpause('12')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio12" onended="resetbutton('12')" src="https://globalstorybooks.net/media/audio/tet/0052/mp3/12.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton12" onclick="playpause('12')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -385,11 +399,11 @@
 <div id="text13" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/13.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3>
-	Simbegwire ninia tia lori labarik feto ne’e ba ninia uma rasik. Nia fó ba Simbegwire ai-han manas no hatoba nia iha kama ho ninia mama nia lensol. Iha kalan ne’e, Simbegwire tanis bainhira nia toba. maibé sira hanesan tanis aliviu nian. Nia hatene katak ninia tia sei tau matan ba nia.
+	Simbegwire ninia tia lori labarik feto ne’e ba ninia uma rasik. Nia fó ba Simbegwire ai-han manas no hatoba nia iha kama ho ninia mama nia lensol. Iha kalan ne’e, Simbegwire tanis bainhira nia toba. Maibé sira hanesan tanis aliviu nian. Nia hatene katak ninia tia sei tau matan ba nia.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l1"><h3>
-	Simbegwire ninia tia lori labarik feto ne’e ba ninia uma rasik. Nia fó ba Simbegwire ai-han manas no hatoba nia iha kama ho ninia mama nia lensol. Iha kalan ne’e, Simbegwire tanis bainhira nia toba. maibé sira hanesan tanis aliviu nian. Nia hatene katak ninia tia sei tau matan ba nia.
+	Simbegwire ninia tia lori labarik feto ne’e ba ninia uma rasik. Nia fó ba Simbegwire ai-han manas no hatoba nia iha kama ho ninia mama nia lensol. Iha kalan ne’e, Simbegwire tanis bainhira nia toba. Maibé sira hanesan tanis aliviu nian. Nia hatene katak ninia tia sei tau matan ba nia.
 	</h3></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l2"><h3>
 	A tia de Simbegwire levou-a para sua própria casa. Ela deu a Simbegwire comida quentinha, colocou-a na cama e a cobriu com o cobertor de sua mãe. Aquela noite, Simbegwire chorou antes de adormecer. Mas eram lágrimas de alívio. Ela sabia que sua tia cuidaria dela.
@@ -398,7 +412,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text12" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text14" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton13" onclick="playpause('13')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio13" onended="resetbutton('13')" src="https://globalstorybooks.net/media/audio/tet/0052/mp3/13.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton13" onclick="playpause('13')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -425,7 +440,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text13" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text15" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton14" onclick="playpause('14')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio14" onended="resetbutton('14')" src="https://globalstorybooks.net/media/audio/tet/0052/mp3/14.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton14" onclick="playpause('14')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -439,11 +455,11 @@
 <div id="text15" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/15.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3>
-	Simbegwire halimar hela ho ninia primu sira bainhira nia haree nia papa husi dook. Nia ta’uk karik nia papa sei hirus, ho nune’e nia halai tama uma laran atu subar. maibé nia papa ba tuir nia no dehan “Simbegwire, o hetan ona inan perfeitu ida ba o nia aan. Ida ne’ebé hadomi o no komprende o. Hau orgullu ho o no hadomi o. “Sira konkorda katak Simbegwire sei hela ho ninia tia tuir tempu ne’ebé de’it nia hakarak.
+	Simbegwire halimar hela ho ninia primu sira bainhira nia haree nia papa husi dook. Nia ta’uk karik nia papa sei hirus, ho nune’e nia halai tama uma laran atu subar. Maibé nia papa ba tuir nia no dehan “Simbegwire, o hetan ona inan perfeitu ida ba o nia aan. Ida ne’ebé hadomi o no komprende o. Hau orgullu ho o no hadomi o. “Sira konkorda katak Simbegwire sei hela ho ninia tia tuir tempu ne’ebé de’it nia hakarak.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l1"><h3>
-	Simbegwire halimar hela ho ninia primu sira bainhira nia haree nia papa husi dook. Nia ta’uk karik nia papa sei hirus, ho nune’e nia halai tama uma laran atu subar. maibé nia papa ba tuir nia no dehan “Simbegwire, o hetan ona inan perfeitu ida ba o nia aan. Ida ne’ebé hadomi o no komprende o. Hau orgullu ho o no hadomi o. “Sira konkorda katak Simbegwire sei hela ho ninia tia tuir tempu ne’ebé de’it nia hakarak.
+	Simbegwire halimar hela ho ninia primu sira bainhira nia haree nia papa husi dook. Nia ta’uk karik nia papa sei hirus, ho nune’e nia halai tama uma laran atu subar. Maibé nia papa ba tuir nia no dehan “Simbegwire, o hetan ona inan perfeitu ida ba o nia aan. Ida ne’ebé hadomi o no komprende o. Hau orgullu ho o no hadomi o. “Sira konkorda katak Simbegwire sei hela ho ninia tia tuir tempu ne’ebé de’it nia hakarak.
 	</h3></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt l2"><h3>
 	Simbegwire estava brincando com seus primos quando viu seu pai de longe. Estava com medo que ele estivesse brabo com ela, então, correu para dentro de casa para esconder-se. Mas seu pai foi até ela e disse, “Simbegwire, você encontrou a mãe perfeita para você. Uma que ama e entende você. Estou orgulhoso e amo você.” Eles concordaram que Simbegwire ficasse com sua tia o quanto ela quisesse.
@@ -452,7 +468,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text14" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text16" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton15" onclick="playpause('15')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio15" onended="resetbutton('15')" src="https://globalstorybooks.net/media/audio/tet/0052/mp3/15.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton15" onclick="playpause('15')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -479,7 +496,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text15" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text17" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton16" onclick="playpause('16')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio16" onended="resetbutton('16')" src="https://globalstorybooks.net/media/audio/tet/0052/mp3/16.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton16" onclick="playpause('16')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -506,7 +524,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text16" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#colophon" class="btn btn-lg" title="Story credits"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton17" onclick="playpause('17')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio17" onended="resetbutton('17')" src="https://globalstorybooks.net/media/audio/tet/0052/mp3/17.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton17" onclick="playpause('17')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,tet','tet,pt,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and Tetun">tet</button>
@@ -523,6 +542,7 @@
 		<h5><span class="colophon-heading">Written by:</span> Rukia Nantale</h5>
 		<h5><span class="colophon-heading">Illustrated by:</span> Benjamin Mitchley</h5>
 		<h5><span class="colophon-heading">Translated by:</span> Aurelio da Costa</h5>
+		<h5><span class="colophon-heading">Read by:</span> Aurelio Costa, Vitalina Costa, Criscencia Costa</h5>
 		<h5><span class="colophon-heading">Language:</span> <a href="/storybooks-timorleste/stories/tet">Tetum</a></h5>
 		<h5><span class="colophon-heading">Level:</span> <a href="/storybooks-timorleste/stories/tet/level5">Level 5</a></h5>
 		<h5><span class="colophon-heading">Source:</span> <a href="https://africanstorybook.org/reader.php?id=7068" target="_blank">Simbegwire</a> from <a href="https://africanstorybook.org/">African Storybook</a></h5>
